@@ -1,6 +1,6 @@
 # Publishing checklist (publisher actions)
 
-The source, build, documentation and QA evidence are ready locally. The steps below require your own GitHub, hosting and Google Drive accounts; no remote action has been taken.
+The source, build, documentation and QA evidence are ready locally. A self-contained `standalone/index.html` is also included: double-click it for an instant offline preview (see `OPEN_ME.txt`). The steps below require your own GitHub and Google Drive accounts.
 
 ## 1. Private GitHub repository with reviewer access
 
@@ -21,7 +21,7 @@ git remote add origin https://github.com/<your-account>/<repo-name>.git
 git push -u origin main
 ```
 
-In repository **Settings → Collaborators**, add the authorized reviewer with **Read** access. Confirm the README, `dist/` exclusions (see `.gitignore`), source and QA evidence are present on the main branch.
+In repository **Settings → Collaborators**, add the authorized reviewer with **Read** access. Confirm the README, `OPEN_ME.txt`, the `standalone/` and `qa/evidence/` folders, source and documentation are present on the main branch (`dist/` and `node_modules/` are intentionally excluded by `.gitignore`).
 
 ## 2. Live HTTPS preview — DONE
 

@@ -1,0 +1,19 @@
+{
+  "url": "file:///C:/Users/karth/OneDrive/Desktop/Vs%20Code/Develop%20Responsive%20Business%20Landing%20Page%20for%20Aarti%20Pandey/aarti-pandey-landing/standalone/index.html",
+  "status": "PASS",
+  "heading": "Build clarity.Move forward.",
+  "sections": 5,
+  "fields": 4,
+  "imagesLoaded": true,
+  "overflow": false,
+  "emptyErrors": [
+    "Enter your full name.",
+    "Enter your work email.",
+    "Enter your organization."
+  ],
+  "emailError": "Enter a valid email address, for example name@company.com.",
+  "success": "Thank you. Your request has been recorded in this browser session.",
+  "sentinel": "alive",
+  "hash": "#services",
+  "errors": []
+}

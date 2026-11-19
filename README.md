@@ -18,6 +18,8 @@ npm run build     # produce the optimized production build in dist/
 npm run preview   # serve the production build locally (http://localhost:4173)
 npm run qa        # build, launch Microsoft Edge headless, run 14 viewport/QA checks
 npm run qa:static # verify dist/index.html in VS Code Live Preview (port 3000 must be running)
+npm run build:standalone  # create the self-contained standalone/index.html
+npm run qa:standalone     # verify standalone/index.html over file://
 ```
 
 `npm run qa` uses `playwright-core` with the locally installed Microsoft Edge; it does not download a browser. It writes screenshots and measurements to `qa/evidence/` and overwrites `COMPLETED_QA_MATRIX.csv` with the recorded results.
@@ -28,22 +30,29 @@ The source `index.html` contains JSX and bare React imports, so it **cannot be o
 
 | Method | Command / URL | Notes |
 | --- | --- | --- |
+| Standalone file (no server) | Double-click `standalone/index.html` | One self-contained file with CSS, JS and artwork inlined. Works offline. |
 | Vite dev server | `npm run dev` → `http://localhost:5173/` | Recommended while editing; supports HMR. |
 | Vite production preview | `npm run build && npm run preview` → `http://localhost:4173/` | Serves the exact production output. |
 | VS Code Live Preview | Open `/aarti-pandey-landing/dist/index.html` at port 3000 | Works after a build: `vite.config.js` sets `base: './'` and all image/favicon URLs are relative. Open the **built** file, not the source `index.html`. |
+| Live website | `https://aarti-pandey-landing.vercel.app` | Public production deployment. |
 
-A blank page at `.../aarti-pandey-landing/index.html?vscode-livepreview=true` means a static server tried to run unbundled JSX; switch to one of the URLs above.
+A blank page at `.../aarti-pandey-landing/index.html?vscode-livepreview=true` means a static server tried to run unbundled JSX; switch to one of the options above. `OPEN_ME.txt` also lists these choices.
 
 ## Project structure
 
 ```
 aarti-pandey-landing/
+├── OPEN_ME.txt                     # which file to open / why source index is blank
 ├── index.html                     # Vite entry document: metadata, viewport, favicon
 ├── vite.config.js                 # relative base for portable static previews
 ├── .editorconfig                  # shared formatting rules
 ├── public/
 │   ├── assets/                    # original supplied logo, hero and icon artwork
 │   └── favicon.svg
+├── scripts/
+│   └── build-standalone.mjs       # inlines build output into standalone/index.html
+├── standalone/
+│   └── index.html                 # self-contained, double-clickable page
 ├── src/
 │   ├── main.jsx                   # React root + global style imports
 │   ├── App.jsx                    # landmarks, skip link and section order
@@ -62,7 +71,8 @@ aarti-pandey-landing/
 ├── qa/
 │   ├── responsive-check.mjs       # automated browser QA driver
 │   ├── static-preview-check.mjs   # verifies the built page in a static server
-│   └── evidence/                  # screenshots + results.json
+│   ├── standalone-check.mjs       # verifies the standalone file over file://
+│   └── evidence/                  # screenshots + JSON result files
 ├── COMPLETED_QA_MATRIX.csv         # 14 test cases with actual results
 ├── TECHNICAL_SUMMARY.pdf           # component/design/test summary
 ├── COMPLETION_NOTE.txt             # final deliverable and URL checklist

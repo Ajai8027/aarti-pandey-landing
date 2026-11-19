@@ -5,12 +5,14 @@ Completion date: 19 November 2026
 FINAL DELIVERABLES (in this project folder)
 1. React + Vite source code ................ aarti-pandey-landing/
 2. Setup, scripts and structure ............ README.md
-3. Technical summary (4 pages, PDF) ........ TECHNICAL_SUMMARY.pdf
+3. Which file to open ...................... OPEN_ME.txt
+4. Double-clickable self-contained page .... standalone/index.html
+5. Technical summary (PDF) ................. TECHNICAL_SUMMARY.pdf
    (printable source also supplied as TECHNICAL_SUMMARY.html)
-4. QA matrix with actual results ........... COMPLETED_QA_MATRIX.csv
-5. Browser evidence (screenshots + data) ... qa/evidence/
-6. Publication checklist .................. PUBLISHING.md
-7. This note .............................. COMPLETION_NOTE.txt
+6. QA matrix with actual results ........... COMPLETED_QA_MATRIX.csv
+7. Browser evidence (screenshots + data) ... qa/evidence/
+8. Publication checklist .................. PUBLISHING.md
+9. This note .............................. COMPLETION_NOTE.txt
 
 URLS TO INSERT BEFORE SUBMISSION
 GitHub repository (private, reviewer invited): [INSERT URL]
@@ -26,10 +28,13 @@ VALIDATION SUMMARY
 - npm run qa: PASS 14/14 cases at 375/390/768/1024/1440px, 0 console errors
 - Registration form: accessible validation and in-session success message;
   no backend, analytics or external form submission.
-- Viewing note: use npm run dev (5173), npm run preview (4173), or open
-  dist/index.html in VS Code Live Preview. The source index.html needs Vite.
+- Viewing note: double-click standalone/index.html (no server), use npm run dev
+  (5173), npm run preview (4173), or open dist/index.html in VS Code Live
+  Preview. The source index.html needs Vite and shows white in a static server.
 - npm run qa:static: PASS (built page renders in VS Code Live Preview at 3000,
   all images load, no console errors).
+- npm run qa:standalone: PASS (self-contained file renders over file:// with all
+  images, working form and anchors, no console errors).
 - Live Vercel URL verified at 375/768/1024px: heading and 5 sections render,
   all images load, no overflow, empty/invalid/valid form paths pass, anchors
   work, 0 console errors.

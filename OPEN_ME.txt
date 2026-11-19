@@ -1,0 +1,30 @@
+AARTI PANDEY BUSINESS STUDIO — WHICH FILE SHOULD I OPEN?
+
+1) FASTEST — double-click this file:
+   standalone\index.html
+   It is one self-contained HTML file with all CSS, JavaScript and artwork
+   inlined. No server, no install, no internet connection needed.
+
+2) DEVELOPMENT — when editing the React source:
+   npm install
+   npm run dev
+   Then open http://localhost:5173/
+   Do NOT open the source index.html in VS Code Live Preview.
+
+3) PRODUCTION BUILD IN VS CODE LIVE PREVIEW (port 3000):
+   npm run build
+   Then open:
+   http://127.0.0.1:3000/aarti-pandey-landing/dist/index.html
+
+4) LIVE WEBSITE:
+   https://aarti-pandey-landing.vercel.app
+
+WHY DOES .../aarti-pandey-landing/index.html SHOW A WHITE PAGE?
+That file is the Vite source entry. It contains JSX and React imports that
+only Vite can compile. A static server such as VS Code Live Preview cannot
+run it, so the page stays blank. Use option 1, 2, 3 or 4 above instead.
+
+To rebuild the standalone file after changing source code:
+   npm run build:standalone
+To verify it:
+   npm run qa:standalone
