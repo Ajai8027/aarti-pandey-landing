@@ -24,6 +24,8 @@ npm run build:standalone  # create the self-contained standalone/index.html
 npm run qa:standalone     # verify standalone/index.html over file://
 ```
 
+`standalone/index.html` is formatted for readability. Running `npm run build:standalone` regenerates it from the minified build output and will replace that formatting; re-run a formatter (for example `npx prettier --write standalone/index.html`) afterwards if the readable version is needed.
+
 `npm run qa` uses `playwright-core` with the locally installed Microsoft Edge; it does not download a browser. It writes screenshots and measurements to `qa/evidence/` and overwrites `COMPLETED_QA_MATRIX.csv` with the recorded results.
 
 ## Viewing the page (important)
