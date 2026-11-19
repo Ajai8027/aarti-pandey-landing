@@ -2,21 +2,15 @@
  * Verifies the self-contained standalone/index.html when opened directly from
  * disk (file://), with no dev server, network connection, or asset files.
  */
-import { writeFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
-import { chromium } from 'playwright-core';
+import { collectErrors, launchBrowser, writeReport } from './helpers.mjs';
 
 const htmlPath = fileURLToPath(new URL('../standalone/index.html', import.meta.url));
 const url = pathToFileURL(htmlPath).href;
-const edgePath = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
 
-const browser = await chromium.launch({ executablePath: edgePath, headless: true });
+const { browser } = await launchBrowser();
 const page = await browser.newPage({ viewport: { width: 375, height: 900 } });
-const errors = [];
-page.on('pageerror', (error) => errors.push(error.message));
-page.on('console', (message) => {
-  if (message.type() === 'error') errors.push(message.text());
-});
+const errors = collectErrors(page);
 
 await page.goto(url, { waitUntil: 'load' });
 await page.locator('h1').waitFor();
@@ -75,7 +69,7 @@ const report = {
   hash,
   errors,
 };
-writeFileSync(fileURLToPath(new URL('./evidence/standalone.json', import.meta.url)), JSON.stringify(report, null, 2));
+writeReport('standalone.json', report);
 
 console.log(`Standalone file:// page: ${report.status}`);
 console.log(JSON.stringify(report, null, 2));

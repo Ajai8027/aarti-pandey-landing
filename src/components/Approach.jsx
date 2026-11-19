@@ -22,8 +22,8 @@ const steps = [
 export default function Approach() {
   return (
     <section id="approach" className={styles.approach} aria-labelledby="approach-title">
-      <div className={styles.inner}>
-        <header className={styles.heading}>
+      <div className={`container ${styles.inner}`}>
+        <header className={`section-heading ${styles.heading}`}>
           <h2 id="approach-title">How we approach progress</h2>
           <p>A simple sequence that keeps each decision practical and easy to act on.</p>
         </header>

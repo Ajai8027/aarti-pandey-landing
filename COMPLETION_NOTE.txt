@@ -24,6 +24,9 @@ COMPLETION_NOTE.txt and a short links note containing the two URLs above,
 then share the folder with the authorized reviewer as Viewer.
 
 VALIDATION SUMMARY
+- Source cleanup: unused PNG duplicates removed (original SVGs retained),
+  unused design token removed, shared FormField/container styles introduced,
+  QA browser/report helpers consolidated. Build has no warnings.
 - npm run build: PASS (Vite 8.3.8, no errors, 0 npm audit vulnerabilities)
 - npm run qa: PASS 14/14 cases at 375/390/768/1024/1440px, 0 console errors
 - Registration form: accessible validation and in-session success message;

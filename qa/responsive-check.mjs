@@ -3,27 +3,14 @@
  * Uses playwright-core with the locally installed Microsoft Edge (no browser download).
  * Run with `npm run qa` after `npm install`.
  */
-import { chromium } from 'playwright-core';
 import { execFileSync, spawn } from 'node:child_process';
-import { existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const root = fileURLToPath(new URL('..', import.meta.url));
-const evidenceDir = join(root, 'qa', 'evidence');
-mkdirSync(evidenceDir, { recursive: true });
+import { collectErrors, launchBrowser, root, writeReport } from './helpers.mjs';
 
 const port = 4173;
 const baseUrl = `http://127.0.0.1:${port}`;
 const viteBin = join(root, 'node_modules', 'vite', 'bin', 'vite.js');
-const edgeCandidates = [
-  'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-  'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
-  '/usr/bin/microsoft-edge',
-  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
-];
-const executablePath = edgeCandidates.find(existsSync);
-if (!executablePath) throw new Error('Microsoft Edge executable was not found; update edgeCandidates in this script.');
 
 const cases = {
   QA01: { id: 'QA01', area: 'Header', viewport: '375px', action: 'Use navigation', expected: 'Menu reachable and anchors functional', actual: '', status: '', evidence: '' },
@@ -93,15 +80,12 @@ const server = spawn(process.execPath, [viteBin, 'preview', '--host', '127.0.0.1
 });
 
 let browser;
+let executablePath;
 try {
   await waitForServer(baseUrl);
-  browser = await chromium.launch({ executablePath, headless: true });
+  ({ browser, executablePath } = await launchBrowser());
   const page = await browser.newPage({ viewport: { width: 375, height: 900 } });
-  const consoleErrors = [];
-  page.on('console', (message) => {
-    if (message.type() === 'error') consoleErrors.push(message.text());
-  });
-  page.on('pageerror', (error) => consoleErrors.push(error.message));
+  const consoleErrors = collectErrors(page);
 
   async function audit(width) {
     await page.setViewportSize({ width, height: 900 });
@@ -285,10 +269,7 @@ try {
   metrics[1440] = m;
   await screenshot(1440);
 
-  writeFileSync(
-    join(evidenceDir, 'results.json'),
-    JSON.stringify({ browser: await browser.version(), executablePath, baseUrl, buildOutput, metrics, resizeReport, focusSequence, consoleErrors, cases }, null, 2),
-  );
+  writeReport('results.json', { browser: await browser.version(), executablePath, baseUrl, buildOutput, metrics, resizeReport, focusSequence, consoleErrors, cases });
   writeFileSync(
     join(root, 'COMPLETED_QA_MATRIX.csv'),
     ['Test_ID,Area,Viewport,Action,Expected_Result,Actual_Result,Status,Evidence', ...Object.values(cases).map((item) => [item.id, item.area, item.viewport, item.action, item.expected, item.actual, item.status, item.evidence].map(csv).join(','))].join('\r\n') + '\r\n',

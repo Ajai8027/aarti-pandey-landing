@@ -4,7 +4,7 @@ import styles from '../styles/Footer.module.css';
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.inner}>
+      <div className={`container ${styles.inner}`}>
         <div className={styles.brandBlock}>
           <p className={styles.brand}>
             AARTI PANDEY <span aria-hidden="true">/</span> BUSINESS STUDIO

@@ -62,10 +62,10 @@
       <tr><td>Features</td><td><code>#services</code> heading, intro and three icon cards (named to match the technical spec)</td><td>—</td></tr>
       <tr><td>Approach</td><td><code>#approach</code> ordered Understand / Prioritize / Implement steps</td><td>—</td></tr>
       <tr><td>About</td><td><code>#about</code> band with the supplied body copy</td><td>—</td></tr>
-      <tr><td>RegistrationForm</td><td><code>#register</code> controlled fields, validation, focus handling and success state</td><td>useState, useRef, useEffect</td></tr>
+      <tr><td>RegistrationForm</td><td><code>#register</code> controlled fields, validation, focus handling and success state; uses a local <code>FormField</code> helper for the three text inputs</td><td>useState, useRef, useEffect</td></tr>
       <tr><td>Footer</td><td>Brand, tagline, in-page links, example contact link, legal line</td><td>—</td></tr>
     </table>
-    <p>Each component has one matching <code>*.module.css</code> file. Shared values live in <code>src/styles/tokens.css</code> and <code>src/styles/global.css</code>.</p>
+    <p>Each component has one matching <code>*.module.css</code> file. Shared values live in <code>src/styles/tokens.css</code>; <code>src/styles/global.css</code> holds the reset plus the shared <code>.container</code> and <code>.section-heading</code> layout utilities used by all sections.</p>
   </section>
 
   <section>
@@ -102,7 +102,7 @@
 
   <section>
     <h2>7. Browser / device viewport tests and evidence</h2>
-    <p>Executed with <code>npm run qa</code> (playwright-core driving headless Microsoft Edge 157.0.4341.60). Full measurements, console output and screenshots are in <code>qa/evidence/</code>; the completed matrix is <code>COMPLETED_QA_MATRIX.csv</code>.</p>
+    <p>Executed with <code>npm run qa</code> (playwright-core driving headless Microsoft Edge 157.0.4341.60). All three QA scripts share <code>qa/helpers.mjs</code> for browser launch, error collection and report writing. Full measurements, console output and screenshots are in <code>qa/evidence/</code>; the completed matrix is <code>COMPLETED_QA_MATRIX.csv</code>.</p>
     <table>
       <tr><th>Cases</th><th>Recorded result</th><th>Status</th></tr>
       <tr><td>QA01–QA02 Header/navigation</td><td>Mobile disclosure opened with 4 links and working <code>#services</code> anchor; horizontal nav visible at 1024px with working <code>#approach</code> anchor.</td><td class="pass">PASS</td></tr>

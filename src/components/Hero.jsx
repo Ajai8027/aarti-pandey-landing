@@ -4,7 +4,7 @@ import styles from '../styles/Hero.module.css';
 export default function Hero() {
   return (
     <section id="hero" className={styles.hero} aria-labelledby="hero-title">
-      <div className={styles.inner}>
+      <div className={`container ${styles.inner}`}>
         <div className={styles.content}>
           <p className={styles.eyebrow}>OPERATIONS / STRATEGY / GROWTH</p>
           <h1 id="hero-title" className={styles.title}>

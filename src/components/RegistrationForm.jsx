@@ -26,6 +26,32 @@ function validate(values) {
   return errors;
 }
 
+/** Labelled text input with inline validation messaging, used by this form only. */
+function FormField({ id, label, type = 'text', autoComplete, value, error, onChange, onBlur, inputRef }) {
+  return (
+    <div className={styles.field}>
+      <label className={styles.label} htmlFor={id}>
+        {label} <span className={styles.required} aria-hidden="true">*</span>
+      </label>
+      <input
+        className={`${styles.input} ${error ? styles.inputError : ''}`}
+        id={id}
+        name={id}
+        type={type}
+        autoComplete={autoComplete}
+        required
+        value={value}
+        onChange={onChange}
+        onBlur={onBlur}
+        ref={inputRef}
+        aria-invalid={error ? 'true' : undefined}
+        aria-describedby={error ? `${id}-error` : undefined}
+      />
+      {error && <p className={styles.error} id={`${id}-error`}>{error}</p>}
+    </div>
+  );
+}
+
 /**
  * Accessible briefing registration form. All state stays in this browser session:
  * nothing is fetched, stored, or sent to a server.
@@ -96,8 +122,8 @@ export default function RegistrationForm() {
 
   return (
     <section id="register" className={styles.register} aria-labelledby="register-title">
-      <div className={styles.inner}>
-        <header className={styles.heading}>
+      <div className={`container ${styles.inner}`}>
+        <header className={`section-heading ${styles.heading}`}>
           <h2 id="register-title">Join the Business Growth Briefing</h2>
           <p>A practical session on clearer priorities and smoother workflows.</p>
         </header>
@@ -116,86 +142,43 @@ export default function RegistrationForm() {
               <p className={styles.requiredNote}>Fields marked * are required.</p>
 
               <div className={styles.grid}>
-                <div className={styles.field}>
-                  <label className={styles.label} htmlFor="fullName">
-                    Full name <span className={styles.required} aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    className={`${styles.input} ${errors.fullName ? styles.inputError : ''}`}
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    autoComplete="name"
-                    required
-                    value={values.fullName}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    ref={(element) => {
-                      fieldRefs.current.fullName = element;
-                    }}
-                    aria-invalid={errors.fullName ? 'true' : undefined}
-                    aria-describedby={errors.fullName ? 'fullName-error' : undefined}
-                  />
-                  {errors.fullName && (
-                    <p className={styles.error} id="fullName-error">
-                      {errors.fullName}
-                    </p>
-                  )}
-                </div>
-
-                <div className={styles.field}>
-                  <label className={styles.label} htmlFor="email">
-                    Work email <span className={styles.required} aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    className={`${styles.input} ${errors.email ? styles.inputError : ''}`}
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    value={values.email}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    ref={(element) => {
-                      fieldRefs.current.email = element;
-                    }}
-                    aria-invalid={errors.email ? 'true' : undefined}
-                    aria-describedby={errors.email ? 'email-error' : undefined}
-                  />
-                  {errors.email && (
-                    <p className={styles.error} id="email-error">
-                      {errors.email}
-                    </p>
-                  )}
-                </div>
-
-                <div className={styles.field}>
-                  <label className={styles.label} htmlFor="organization">
-                    Organization <span className={styles.required} aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    className={`${styles.input} ${errors.organization ? styles.inputError : ''}`}
-                    id="organization"
-                    name="organization"
-                    type="text"
-                    autoComplete="organization"
-                    required
-                    value={values.organization}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    ref={(element) => {
-                      fieldRefs.current.organization = element;
-                    }}
-                    aria-invalid={errors.organization ? 'true' : undefined}
-                    aria-describedby={errors.organization ? 'organization-error' : undefined}
-                  />
-                  {errors.organization && (
-                    <p className={styles.error} id="organization-error">
-                      {errors.organization}
-                    </p>
-                  )}
-                </div>
+                <FormField
+                  id="fullName"
+                  label="Full name"
+                  autoComplete="name"
+                  value={values.fullName}
+                  error={errors.fullName}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  inputRef={(element) => {
+                    fieldRefs.current.fullName = element;
+                  }}
+                />
+                <FormField
+                  id="email"
+                  label="Work email"
+                  type="email"
+                  autoComplete="email"
+                  value={values.email}
+                  error={errors.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  inputRef={(element) => {
+                    fieldRefs.current.email = element;
+                  }}
+                />
+                <FormField
+                  id="organization"
+                  label="Organization"
+                  autoComplete="organization"
+                  value={values.organization}
+                  error={errors.organization}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  inputRef={(element) => {
+                    fieldRefs.current.organization = element;
+                  }}
+                />
 
                 <div className={styles.field}>
                   <label className={styles.label} htmlFor="interest">

@@ -1,4 +1,4 @@
-/* Global reset and base typography. Component styling lives in CSS Modules. */
+/* Global reset, base typography and shared layout utilities. Component styling lives in CSS Modules. */
 *,
 *::before,
 *::after {
@@ -61,6 +61,16 @@ button {
 ::selection {
   background: var(--accent);
   color: var(--navy);
+}
+
+/* Shared across all sections; each section module adds its own spacing. */
+.container {
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+.section-heading {
+  text-align: center;
 }
 
 /* Anchored sections clear the fixed-height header area when scrolled to. */

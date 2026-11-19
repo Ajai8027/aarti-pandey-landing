@@ -4,8 +4,6 @@
 }
 
 .inner {
-  max-width: var(--content-max);
-  margin-inline: auto;
   padding-inline: var(--pad-desktop);
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);

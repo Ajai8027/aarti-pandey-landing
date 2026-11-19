@@ -28,8 +28,8 @@ const services = [
 export default function Features() {
   return (
     <section id="services" className={styles.services} aria-labelledby="services-title">
-      <div className={styles.inner}>
-        <header className={styles.heading}>
+      <div className={`container ${styles.inner}`}>
+        <header className={`section-heading ${styles.heading}`}>
           <h2 id="services-title">What we help you improve</h2>
           <p>Three focused areas for stronger day-to-day business decisions.</p>
         </header>

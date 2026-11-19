@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <header className={styles.header} onKeyDown={handleKeyDown}>
-      <div className={styles.inner}>
+      <div className={`container ${styles.inner}`}>
         <a className={styles.brand} href="#hero" aria-label="Aarti Pandey Business Studio home">
           <img
             className={styles.logo}

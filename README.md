@@ -62,13 +62,14 @@ aarti-pandey-landing/
 │   │   ├── Features.jsx           # "Services" section and three service cards
 │   │   ├── Approach.jsx           # three numbered approach steps
 │   │   ├── About.jsx              # short about band
-│   │   ├── RegistrationForm.jsx   # controlled form, validation, success state
+│   │   ├── RegistrationForm.jsx   # controlled form with a local FormField helper
 │   │   └── Footer.jsx             # links, example contact, legal copy
 │   └── styles/
 │       ├── tokens.css             # brand colours, spacing, radii custom properties
-│       ├── global.css             # reset, typography, focus and reduced motion
+│       ├── global.css             # reset, typography and shared .container utilities
 │       └── *.module.css           # one scoped stylesheet per component
 ├── qa/
+│   ├── helpers.mjs                # shared browser launch and report helpers
 │   ├── responsive-check.mjs       # automated browser QA driver
 │   ├── static-preview-check.mjs   # verifies the built page in a static server
 │   ├── standalone-check.mjs       # verifies the standalone file over file://

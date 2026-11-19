@@ -4,7 +4,7 @@ import styles from '../styles/About.module.css';
 export default function About() {
   return (
     <section id="about" className={styles.about} aria-labelledby="about-title">
-      <div className={styles.inner}>
+      <div className={`container ${styles.inner}`}>
         <div className={styles.heading}>
           <span className={styles.accent} aria-hidden="true" />
           <h2 id="about-title">Work designed for practical teams</h2>

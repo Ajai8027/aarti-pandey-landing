@@ -4,13 +4,10 @@
 }
 
 .inner {
-  max-width: var(--content-max);
-  margin-inline: auto;
   padding-inline: var(--pad-desktop);
 }
 
 .heading {
-  text-align: center;
   margin-bottom: 48px;
 }
 
