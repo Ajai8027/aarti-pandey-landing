@@ -4,6 +4,8 @@ A fast, single-page React landing page for Aarti Pandey Business Studio, built f
 
 **Live demo:** [https://aarti-pandey-landing.vercel.app](https://aarti-pandey-landing.vercel.app)
 
+**Source:** [https://github.com/Ajai8027/aarti-pandey-landing](https://github.com/Ajai8027/aarti-pandey-landing)
+
 ## Requirements
 
 - Node.js 20.19+ or 22.12+ (Vite 8 requirement; verified on Node 24)

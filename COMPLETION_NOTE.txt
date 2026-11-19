@@ -14,11 +14,11 @@ FINAL DELIVERABLES (in this project folder)
 8. Publication checklist .................. PUBLISHING.md
 9. This note .............................. COMPLETION_NOTE.txt
 
-URLS TO INSERT BEFORE SUBMISSION
-GitHub repository (private, reviewer invited): [INSERT URL]
+FINAL URLS
+GitHub repository (public):                    https://github.com/Ajai8027/aarti-pandey-landing
 Live HTTPS deployment (Vercel):                https://aarti-pandey-landing.vercel.app
 
-GOOGLE DRIVE SUBMISSION FOLDER
+GOOGLE DRIVE SUBMISSION FOLDER — PENDING
 Create one folder, place TECHNICAL_SUMMARY.pdf, COMPLETED_QA_MATRIX.csv,
 COMPLETION_NOTE.txt and a short links note containing the two URLs above,
 then share the folder with the authorized reviewer as Viewer.

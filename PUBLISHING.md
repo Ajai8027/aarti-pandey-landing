@@ -2,26 +2,17 @@
 
 The source, build, documentation and QA evidence are ready locally. A self-contained `standalone/index.html` is also included: double-click it for an instant offline preview (see `OPEN_ME.txt`). The steps below require your own GitHub and Google Drive accounts.
 
-## 1. Private GitHub repository with reviewer access
+## 1. GitHub repository — DONE
 
-From PowerShell, inside `aarti-pandey-landing/`:
+Pushed to the public repository **https://github.com/Ajai8027/aarti-pandey-landing** on branch `main`. Verified with `git ls-remote` and by fetching `README.md` and `standalone/index.html` over HTTPS.
 
-A local Git repository with one clean commit is already included. Confirm its status and add any last edits:
-
-```powershell
-git status
-git add .
-git commit -m "Add publication links and final documentation"
-```
-
-If the `.git` directory was removed, recreate it with `git init -b main` before committing. Create an **empty private** repository on GitHub (web UI or `gh repo create <name> --private`), then:
+To pull future changes locally:
 
 ```powershell
-git remote add origin https://github.com/<your-account>/<repo-name>.git
-git push -u origin main
+git pull origin main
 ```
 
-In repository **Settings → Collaborators**, add the authorized reviewer with **Read** access. Confirm the README, `OPEN_ME.txt`, the `standalone/` and `qa/evidence/` folders, source and documentation are present on the main branch (`dist/` and `node_modules/` are intentionally excluded by `.gitignore`).
+The repository contains the React source, source `index.html`, `standalone/index.html`, README, `OPEN_ME.txt`, QA evidence and all documentation. `dist/` and `node_modules/` are intentionally excluded by `.gitignore`.
 
 ## 2. Live HTTPS preview — DONE
 
