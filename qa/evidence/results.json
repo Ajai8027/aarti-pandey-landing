@@ -1,0 +1,619 @@
+{
+  "browser": "157.0.4341.60",
+  "executablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "baseUrl": "http://127.0.0.1:4173",
+  "buildOutput": "\u001b[36mvite v8.3.8 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 31 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.75 kB │ gzip:  0.43 kB\ndist/assets/index-h1cYkHZf.css   14.35 kB │ gzip:  3.32 kB\ndist/assets/index-CodESxco.js   153.11 kB │ gzip: 49.91 kB\n\n\u001b[32m✓ built in 673ms\u001b[39m\n",
+  "metrics": {
+    "375": {
+      "vw": 375,
+      "docScrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "offenders": [],
+      "heroContent": {
+        "x": 23,
+        "y": 142,
+        "w": 329,
+        "h": 300,
+        "right": 352,
+        "bottom": 442
+      },
+      "heroVisual": {
+        "x": 23,
+        "y": 472,
+        "w": 329,
+        "h": 261,
+        "right": 352,
+        "bottom": 732
+      },
+      "cards": [
+        {
+          "x": 23,
+          "y": 968,
+          "w": 329
+        },
+        {
+          "x": 23,
+          "y": 1161,
+          "w": 329
+        },
+        {
+          "x": 23,
+          "y": 1375,
+          "w": 329
+        }
+      ],
+      "fields": [
+        {
+          "name": "fullName",
+          "x": 43,
+          "y": 2866
+        },
+        {
+          "name": "email",
+          "x": 43,
+          "y": 2962
+        },
+        {
+          "name": "organization",
+          "x": 43,
+          "y": 3058
+        },
+        {
+          "name": "interest",
+          "x": 43,
+          "y": 3154
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/AartiPandey_Logo.svg",
+          "alt": "Aarti Pandey / Business Studio",
+          "width": "420",
+          "height": "110",
+          "naturalWidth": 420
+        },
+        {
+          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
+          "width": "820",
+          "height": "650",
+          "naturalWidth": 820
+        },
+        {
+          "src": "/assets/Icon_Strategy.svg",
+          "alt": "Bar chart icon representing strategy",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Operations.svg",
+          "alt": "Connected nodes icon representing operations",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Enablement.svg",
+          "alt": "Check mark icon representing team enablement",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        }
+      ],
+      "menuVisible": true,
+      "navVisible": false,
+      "landmarks": {
+        "header": 1,
+        "main": 1,
+        "sections": 5,
+        "footer": 1
+      }
+    },
+    "768": {
+      "vw": 768,
+      "docScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "offenders": [],
+      "heroContent": {
+        "x": 86,
+        "y": 163,
+        "w": 596,
+        "h": 245,
+        "right": 682,
+        "bottom": 408
+      },
+      "heroVisual": {
+        "x": 124,
+        "y": 446,
+        "w": 520,
+        "h": 412,
+        "right": 644,
+        "bottom": 858
+      },
+      "cards": [
+        {
+          "x": 86,
+          "y": 1126,
+          "w": 188
+        },
+        {
+          "x": 290,
+          "y": 1126,
+          "w": 188
+        },
+        {
+          "x": 494,
+          "y": 1126,
+          "w": 188
+        }
+      ],
+      "fields": [
+        {
+          "name": "fullName",
+          "x": 114,
+          "y": 2409
+        },
+        {
+          "name": "email",
+          "x": 114,
+          "y": 2517
+        },
+        {
+          "name": "organization",
+          "x": 114,
+          "y": 2625
+        },
+        {
+          "name": "interest",
+          "x": 114,
+          "y": 2733
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/AartiPandey_Logo.svg",
+          "alt": "Aarti Pandey / Business Studio",
+          "width": "420",
+          "height": "110",
+          "naturalWidth": 420
+        },
+        {
+          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
+          "width": "820",
+          "height": "650",
+          "naturalWidth": 820
+        },
+        {
+          "src": "/assets/Icon_Strategy.svg",
+          "alt": "Bar chart icon representing strategy",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Operations.svg",
+          "alt": "Connected nodes icon representing operations",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Enablement.svg",
+          "alt": "Check mark icon representing team enablement",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        }
+      ],
+      "menuVisible": false,
+      "navVisible": true,
+      "landmarks": {
+        "header": 1,
+        "main": 1,
+        "sections": 5,
+        "footer": 1
+      }
+    },
+    "1024": {
+      "vw": 1024,
+      "docScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "offenders": [],
+      "heroContent": {
+        "x": 86,
+        "y": 205,
+        "w": 378,
+        "h": 474,
+        "right": 464,
+        "bottom": 679
+      },
+      "heroVisual": {
+        "x": 520,
+        "y": 277,
+        "w": 418,
+        "h": 331,
+        "right": 938,
+        "bottom": 608
+      },
+      "cards": [
+        {
+          "x": 86,
+          "y": 1052,
+          "w": 265
+        },
+        {
+          "x": 379,
+          "y": 1052,
+          "w": 265
+        },
+        {
+          "x": 673,
+          "y": 1052,
+          "w": 265
+        }
+      ],
+      "fields": [
+        {
+          "name": "fullName",
+          "x": 147,
+          "y": 2575
+        },
+        {
+          "name": "email",
+          "x": 526,
+          "y": 2575
+        },
+        {
+          "name": "organization",
+          "x": 147,
+          "y": 2685
+        },
+        {
+          "name": "interest",
+          "x": 526,
+          "y": 2685
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/AartiPandey_Logo.svg",
+          "alt": "Aarti Pandey / Business Studio",
+          "width": "420",
+          "height": "110",
+          "naturalWidth": 420
+        },
+        {
+          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
+          "width": "820",
+          "height": "650",
+          "naturalWidth": 820
+        },
+        {
+          "src": "/assets/Icon_Strategy.svg",
+          "alt": "Bar chart icon representing strategy",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Operations.svg",
+          "alt": "Connected nodes icon representing operations",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Enablement.svg",
+          "alt": "Check mark icon representing team enablement",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        }
+      ],
+      "menuVisible": false,
+      "navVisible": true,
+      "landmarks": {
+        "header": 1,
+        "main": 1,
+        "sections": 5,
+        "footer": 1
+      }
+    },
+    "1440": {
+      "vw": 1440,
+      "docScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "offenders": [],
+      "heroContent": {
+        "x": 171,
+        "y": 230,
+        "w": 495,
+        "h": 383,
+        "right": 666,
+        "bottom": 613
+      },
+      "heroVisual": {
+        "x": 722,
+        "y": 205,
+        "w": 547,
+        "h": 434,
+        "right": 1269,
+        "bottom": 639
+      },
+      "cards": [
+        {
+          "x": 171,
+          "y": 1011,
+          "w": 347
+        },
+        {
+          "x": 546,
+          "y": 1011,
+          "w": 347
+        },
+        {
+          "x": 922,
+          "y": 1011,
+          "w": 347
+        }
+      ],
+      "fields": [
+        {
+          "name": "fullName",
+          "x": 355,
+          "y": 2529
+        },
+        {
+          "name": "email",
+          "x": 734,
+          "y": 2529
+        },
+        {
+          "name": "organization",
+          "x": 355,
+          "y": 2639
+        },
+        {
+          "name": "interest",
+          "x": 734,
+          "y": 2639
+        }
+      ],
+      "images": [
+        {
+          "src": "/assets/AartiPandey_Logo.svg",
+          "alt": "Aarti Pandey / Business Studio",
+          "width": "420",
+          "height": "110",
+          "naturalWidth": 420
+        },
+        {
+          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
+          "width": "820",
+          "height": "650",
+          "naturalWidth": 820
+        },
+        {
+          "src": "/assets/Icon_Strategy.svg",
+          "alt": "Bar chart icon representing strategy",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Operations.svg",
+          "alt": "Connected nodes icon representing operations",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        },
+        {
+          "src": "/assets/Icon_Enablement.svg",
+          "alt": "Check mark icon representing team enablement",
+          "width": "160",
+          "height": "160",
+          "naturalWidth": 160
+        }
+      ],
+      "menuVisible": false,
+      "navVisible": true,
+      "landmarks": {
+        "header": 1,
+        "main": 1,
+        "sections": 5,
+        "footer": 1
+      }
+    }
+  },
+  "resizeReport": [
+    "375: scrollWidth=375/vw=375",
+    "390: scrollWidth=390/vw=390",
+    "600: scrollWidth=600/vw=600",
+    "768: scrollWidth=768/vw=768",
+    "900: scrollWidth=900/vw=900",
+    "1024: scrollWidth=1024/vw=1024",
+    "1280: scrollWidth=1280/vw=1280",
+    "1440: scrollWidth=1440/vw=1440",
+    "768: scrollWidth=768/vw=768",
+    "390: scrollWidth=390/vw=390"
+  ],
+  "focusSequence": [
+    "Skip to main content",
+    "a",
+    "menu-button",
+    "Join the briefing",
+    "Explore services →",
+    "fullName",
+    "email",
+    "organization",
+    "interest",
+    "Request a place",
+    "Services",
+    "Briefing",
+    "Contact",
+    "body",
+    "Skip to main content",
+    "a",
+    "menu-button",
+    "Join the briefing",
+    "Explore services →",
+    "fullName",
+    "email",
+    "organization",
+    "interest",
+    "Request a place",
+    "Services",
+    "Briefing",
+    "Contact",
+    "body",
+    "Skip to main content",
+    "a"
+  ],
+  "consoleErrors": [],
+  "cases": {
+    "QA01": {
+      "id": "QA01",
+      "area": "Header",
+      "viewport": "375px",
+      "action": "Use navigation",
+      "expected": "Menu reachable and anchors functional",
+      "actual": "Menu button opened disclosure; 4 links present; Services anchor set hash to #services.",
+      "status": "PASS",
+      "evidence": "qa/evidence/375px-menu-open.png"
+    },
+    "QA02": {
+      "id": "QA02",
+      "area": "Header",
+      "viewport": "1024px",
+      "action": "Use navigation",
+      "expected": "Horizontal navigation functional",
+      "actual": "Horizontal navigation visible (true); hamburger hidden (true).",
+      "status": "PASS",
+      "evidence": "qa/evidence/1024px.png"
+    },
+    "QA03": {
+      "id": "QA03",
+      "area": "Hero",
+      "viewport": "375px",
+      "action": "Resize window",
+      "expected": "Content stacks without cropping",
+      "actual": "Hero illustration starts at y=472, content ends at y=442; image right edge 352px. No cropping.",
+      "status": "PASS",
+      "evidence": "qa/evidence/375px.png"
+    },
+    "QA04": {
+      "id": "QA04",
+      "area": "Hero",
+      "viewport": "768px",
+      "action": "Check image and text",
+      "expected": "No overlap or horizontal scrolling",
+      "actual": "Hero visual below text (y=446 vs content bottom 408); document scrollWidth=768; overflow offenders=0.",
+      "status": "PASS",
+      "evidence": "qa/evidence/768px.png"
+    },
+    "QA05": {
+      "id": "QA05",
+      "area": "Features",
+      "viewport": "375px",
+      "action": "Inspect cards",
+      "expected": "Three cards stacked and readable",
+      "actual": "3 service cards, all at x=23 (single column).",
+      "status": "PASS",
+      "evidence": "qa/evidence/375px.png"
+    },
+    "QA06": {
+      "id": "QA06",
+      "area": "Features",
+      "viewport": "1024px",
+      "action": "Inspect cards",
+      "expected": "Three aligned cards",
+      "actual": "3 cards in 3 columns at x=86,379,673, aligned at y=1052, equal width 265px.",
+      "status": "PASS",
+      "evidence": "qa/evidence/1024px.png"
+    },
+    "QA07": {
+      "id": "QA07",
+      "area": "Form",
+      "viewport": "375px",
+      "action": "Submit empty fields",
+      "expected": "Accessible field-level errors",
+      "actual": "3 visible field errors (\"Enter your full name. / Enter your work email. / Enter your organization.\"); aria-invalid=true; focus moved to #fullName.",
+      "status": "PASS",
+      "evidence": "qa/evidence/375px-form-errors.png"
+    },
+    "QA08": {
+      "id": "QA08",
+      "area": "Form",
+      "viewport": "768px",
+      "action": "Submit invalid email",
+      "expected": "Error visible and focus usable",
+      "actual": "Invalid email produced visible error \"Enter a valid email address, for example name@company.com.\"; focus stayed on #email.",
+      "status": "PASS",
+      "evidence": "qa/evidence/768px-email-error.png"
+    },
+    "QA09": {
+      "id": "QA09",
+      "area": "Form",
+      "viewport": "1024px",
+      "action": "Submit valid data",
+      "expected": "Confirmation without page reload",
+      "actual": "Success message: \"Thank you. Your request has been recorded in this browser session.\"; page sentinel=alive (no reload); no network submission configured.",
+      "status": "PASS",
+      "evidence": "qa/evidence/1024px-form-success.png"
+    },
+    "QA10": {
+      "id": "QA10",
+      "area": "Keyboard",
+      "viewport": "375px",
+      "action": "Navigate using Tab",
+      "expected": "All controls reachable",
+      "actual": "Tab order from top: Skip to main content → a → menu-button → Join the briefing → Explore services → → fullName → email → organization → interest → Request a place → Services → Briefing → Contact → body … (30 stops). All form and footer controls reachable.",
+      "status": "PASS",
+      "evidence": "qa/evidence/results.json (focusSequence)"
+    },
+    "QA11": {
+      "id": "QA11",
+      "area": "Semantics",
+      "viewport": "1024px",
+      "action": "Inspect landmarks",
+      "expected": "Semantic header main sections footer",
+      "actual": "header=1, main=1, main sections=5, footer=1.",
+      "status": "PASS",
+      "evidence": "qa/evidence/results.json (landmarks.1024)"
+    },
+    "QA12": {
+      "id": "QA12",
+      "area": "Performance",
+      "viewport": "1024px",
+      "action": "Run production build",
+      "expected": "No build errors or missing assets",
+      "actual": "Vite build succeeded (673ms); emitted JS/CSS, favicon and all brand assets.",
+      "status": "PASS",
+      "evidence": "qa/evidence/results.json (build.output)"
+    },
+    "QA13": {
+      "id": "QA13",
+      "area": "Responsiveness",
+      "viewport": "390px",
+      "action": "Resize gradually",
+      "expected": "No horizontal scrolling at intermediate sizes",
+      "actual": "No horizontal overflow at 375: scrollWidth=375/vw=375; 390: scrollWidth=390/vw=390; 600: scrollWidth=600/vw=600; 768: scrollWidth=768/vw=768; 900: scrollWidth=900/vw=900; 1024: scrollWidth=1024/vw=1024; 1280: scrollWidth=1280/vw=1280; 1440: scrollWidth=1440/vw=1440; 768: scrollWidth=768/vw=768; 390: scrollWidth=390/vw=390.",
+      "status": "PASS",
+      "evidence": "qa/evidence/results.json (resizeReport)"
+    },
+    "QA14": {
+      "id": "QA14",
+      "area": "Images",
+      "viewport": "768px",
+      "action": "Inspect image attributes",
+      "expected": "Meaningful alt and no layout shift",
+      "actual": "5 decorative/brand images checked: all have descriptive alt, intrinsic width/height, and loaded successfully.",
+      "status": "PASS",
+      "evidence": "qa/evidence/results.json (images.768)"
+    }
+  }
+}

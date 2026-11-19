@@ -1,0 +1,25 @@
+/* Brand design tokens. Consumed by every CSS Module via var(--token). */
+:root {
+  --navy: #112b40;
+  --teal: #0f847c;
+  --teal-hover: #0b6a64;
+  --accent: #e8b46a;
+  --off-white: #f5f8f9;
+  --slate: #55707b;
+  --mint: #e9f5f2;
+  --white: #ffffff;
+  --border: #d6e2e5;
+  --border-card: #dde8e8;
+  --input-border: #b7cdd0;
+  --error: #a33324;
+  --footer-muted: #c5dbe1;
+
+  --content-max: 1270px;
+  --pad-desktop: 86px;
+  --pad-tablet: 42px;
+  --pad-mobile: 23px;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}

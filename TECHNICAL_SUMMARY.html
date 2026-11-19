@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Technical Summary — Aarti Pandey Business Studio Landing Page</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 10.5pt; line-height: 1.5; color: #112b40; margin: 0; }
+  h1 { font-size: 21pt; margin: 0 0 2mm; color: #112b40; }
+  h2 { font-size: 12.5pt; margin: 7mm 0 2mm; color: #0f847c; border-bottom: 1px solid #d6e2e5; padding-bottom: 1.5mm; }
+  h3 { font-size: 11pt; margin: 4mm 0 1.5mm; }
+  p { margin: 0 0 2.5mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+  li { margin-bottom: 1mm; }
+  table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; }
+  th, td { border: 1px solid #d6e2e5; padding: 1.8mm 2mm; text-align: left; vertical-align: top; }
+  th { background: #e9f5f2; color: #112b40; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #f5f8f9; padding: 0 1mm; }
+  .subtitle { color: #55707b; margin-bottom: 5mm; }
+  .meta { background: #f5f8f9; padding: 3mm 4mm; border-left: 3px solid #e8b46a; }
+  .pass { color: #0f847c; font-weight: bold; }
+  .note { color: #55707b; font-size: 9pt; }
+  section { break-inside: avoid; }
+</style>
+</head>
+<body>
+  <h1>Technical Summary</h1>
+  <p class="subtitle">Aarti Pandey Business Studio — Responsive React Landing Page &nbsp;|&nbsp; Job ID Kw8hDgNYau3mxCyCLf6G &nbsp;|&nbsp; Completion date: 19 November 2026</p>
+
+  <section>
+    <h2>1. Project and links</h2>
+    <div class="meta">
+      <p><strong>Source (private GitHub repository):</strong> [insert repository URL before submission]</p>
+      <p><strong>Live HTTPS preview (Vercel/Netlify):</strong> [insert deployment URL before submission]</p>
+      <p><strong>Local project:</strong> <code>aarti-pandey-landing/</code> &nbsp;|&nbsp; <strong>Production output:</strong> <code>dist/</code></p>
+    </div>
+    <p>Scope: a single-page, mobile-responsive marketing page with a local-only briefing registration form. The original supplied artwork and copy were used; no unlicensed imagery, analytics, tracking or external form endpoints were added.</p>
+  </section>
+
+  <section>
+    <h2>2. Stack, dependencies and build commands</h2>
+    <table>
+      <tr><th>Item</th><th>Version / value</th><th>Purpose</th></tr>
+      <tr><td>React / React DOM</td><td>18.3.1</td><td>Functional component UI</td></tr>
+      <tr><td>Vite</td><td>8.3.8</td><td>Dev server and production bundler</td></tr>
+      <tr><td>playwright-core</td><td>1.65.x (dev only)</td><td>Automated browser QA with local Microsoft Edge</td></tr>
+      <tr><td>CSS Modules</td><td>built into Vite</td><td>Scoped per-component styling</td></tr>
+    </table>
+    <p>Commands: <code>npm install</code>, <code>npm run dev</code>, <code>npm run build</code>, <code>npm run preview</code>, <code>npm run qa</code>. <code>npm audit</code> reports 0 vulnerabilities. Node 20.19+ or 22.12+ is required by Vite 8; verification used Node 24.19.0.</p>
+  </section>
+
+  <section>
+    <h2>3. Component structure and responsibilities</h2>
+    <table>
+      <tr><th>Component</th><th>Responsibility</th><th>Hooks</th></tr>
+      <tr><td>App</td><td>Skip link, semantic landmarks and section order</td><td>—</td></tr>
+      <tr><td>Header</td><td>Logo, primary anchors, responsive disclosure menu (Escape / resize auto-close)</td><td>useState, useEffect</td></tr>
+      <tr><td>Hero</td><td>Eyebrow, H1, body copy, two CTAs and supplied growth illustration</td><td>—</td></tr>
+      <tr><td>Features</td><td><code>#services</code> heading, intro and three icon cards (named to match the technical spec)</td><td>—</td></tr>
+      <tr><td>Approach</td><td><code>#approach</code> ordered Understand / Prioritize / Implement steps</td><td>—</td></tr>
+      <tr><td>About</td><td><code>#about</code> band with the supplied body copy</td><td>—</td></tr>
+      <tr><td>RegistrationForm</td><td><code>#register</code> controlled fields, validation, focus handling and success state</td><td>useState, useRef, useEffect</td></tr>
+      <tr><td>Footer</td><td>Brand, tagline, in-page links, example contact link, legal line</td><td>—</td></tr>
+    </table>
+    <p>Each component has one matching <code>*.module.css</code> file. Shared values live in <code>src/styles/tokens.css</code> and <code>src/styles/global.css</code>.</p>
+  </section>
+
+  <section>
+    <h2>4. Styling strategy and breakpoints</h2>
+    <p>Fluid desktop-first CSS Modules with custom properties for the brand palette (navy <code>#112B40</code>, teal <code>#0F847C</code>, accent <code>#E8B46A</code>, off-white <code>#F5F8F9</code>, slate <code>#55707B</code>), Arial/system typography and a 1.5 body line-height. Container maximum width is 1270px.</p>
+    <table>
+      <tr><th>Viewport</th><th>Side padding</th><th>Layout</th></tr>
+      <tr><td>375px (mobile)</td><td>23px</td><td>Hamburger menu; hero stacked; cards stacked; form single column; 35px H1</td></tr>
+      <tr><td>768px (tablet)</td><td>42px</td><td>Horizontal compact nav; hero stacked; three compact cards; form single column</td></tr>
+      <tr><td>1024px+ (desktop)</td><td>86px</td><td>Full horizontal nav; two-column hero; three cards; two-column form; 57px H1</td></tr>
+    </table>
+    <p>Intermediate widths were checked at 390, 600, 900, 1280 and 1440px; no horizontal scrolling occurred at any width.</p>
+  </section>
+
+  <section>
+    <h2>5. Registration form</h2>
+    <p>Fields: <strong>Full name</strong>, <strong>Work email</strong> and <strong>Organization</strong> (required); <strong>Area of interest</strong> — Strategy, Operations or Team Enablement (optional). The form uses <code>noValidate</code> and a <code>validate()</code> helper for consistent messaging: missing values produce field-level errors, and a malformed email produces "Enter a valid email address, for example name@company.com.".</p>
+    <p>Errors are visible next to the input, linked by <code>aria-describedby</code>, flagged with <code>aria-invalid="true"</code>, and the first invalid control receives focus. Correcting a field clears its error immediately. A valid submit replaces the form with an <code>aria-live="polite"</code> status containing the exact supplied confirmation text and a "Send another request" reset button.</p>
+    <p><strong>Local-only behaviour:</strong> values live in React state for the current browser session. There is no <code>fetch</code>, no <code>localStorage</code>, no analytics and no server or inbox integration. The word "recorded" refers only to this in-session state.</p>
+  </section>
+
+  <section>
+    <h2>6. Accessibility checks and known limitations</h2>
+    <ul>
+      <li>Semantic <code>header</code>, <code>main</code>, five <code>section</code> elements, <code>nav</code> and <code>footer</code> landmarks verified in the browser.</li>
+      <li>All inputs and the select have visible labels; the submit and menu buttons have accessible names; all five images have descriptive alt text.</li>
+      <li>Skip link, visible <code>:focus-visible</code> outline, Escape-to-close menu, logical heading levels and <code>prefers-reduced-motion</code> support.</li>
+      <li>Tab traversal verified from the top of the 375px page through all form controls and footer links.</li>
+      <li>Limitation: the footer Contact link is the guide's example <code>mailto:hello@example.org</code>; replace with an approved address before production.</li>
+      <li>Limitation: automated QA ran in Microsoft Edge (Chromium) 157 only; Firefox and Safari were not available in the environment.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Browser / device viewport tests and evidence</h2>
+    <p>Executed with <code>npm run qa</code> (playwright-core driving headless Microsoft Edge 157.0.4341.60). Full measurements, console output and screenshots are in <code>qa/evidence/</code>; the completed matrix is <code>COMPLETED_QA_MATRIX.csv</code>.</p>
+    <table>
+      <tr><th>Cases</th><th>Recorded result</th><th>Status</th></tr>
+      <tr><td>QA01–QA02 Header/navigation</td><td>Mobile disclosure opened with 4 links and working <code>#services</code> anchor; horizontal nav visible at 1024px with working <code>#approach</code> anchor.</td><td class="pass">PASS</td></tr>
+      <tr><td>QA03–QA04 Hero</td><td>Stacked at 375px (illustration y=472, content ends y=442) and 768px (y=446 vs 408); scrollWidth equals viewport; zero overflow offenders.</td><td class="pass">PASS</td></tr>
+      <tr><td>QA05–QA06 Services</td><td>3 cards at x=23 on mobile; 3 equal 265px columns at x=86/379/673 on desktop.</td><td class="pass">PASS</td></tr>
+      <tr><td>QA07–QA09 Form</td><td>3 accessible errors on empty submit with focus on fullName; invalid-email error with focus on email; valid submit showed the confirmation with no page reload (window sentinel preserved).</td><td class="pass">PASS</td></tr>
+      <tr><td>QA10 Keyboard</td><td>Skip link first; all fields, submit button and footer links reached by Tab.</td><td class="pass">PASS</td></tr>
+      <tr><td>QA11 Semantics</td><td>header=1, main=1, sections=5, footer=1.</td><td class="pass">PASS</td></tr>
+      <tr><td>QA13 Responsiveness</td><td>scrollWidth matched viewport at 375, 390, 600, 768, 900, 1024, 1280 and 1440px.</td><td class="pass">PASS</td></tr>
+      <tr><td>QA14 Images</td><td>All 5 images have descriptive alt text, intrinsic width/height attributes, and loaded successfully.</td><td class="pass">PASS</td></tr>
+    </table>
+    <p><strong>Result: 14/14 PASS; 0 console errors.</strong> Evidence files: <code>375px.png</code>, <code>375px-menu-open.png</code>, <code>375px-form-errors.png</code>, <code>768px.png</code>, <code>768px-email-error.png</code>, <code>1024px.png</code>, <code>1024px-form-success.png</code>, <code>1440px.png</code>, <code>results.json</code>.</p>
+  </section>
+
+  <section>
+    <h2>8. Production build status and performance observations</h2>
+    <p><code>npm run build</code> completed with no errors in 673ms (31 modules transformed). Output: <code>index.html</code> 0.75 kB (0.43 kB gzip), CSS 14.35 kB (3.32 kB gzip), JavaScript 153.11 kB (49.91 kB gzip). All original SVG/PNG assets were copied into <code>dist/assets/</code> and no asset was missing (QA12).</p>
+    <p>Images declare intrinsic <code>width</code>/<code>height</code> to avoid layout shift; the hero SVG is loaded eagerly as it is above the fold, and the three service icons use <code>loading="lazy"</code>. No third-party scripts, fonts or tracking requests are present, so the page has only local assets.</p>
+  </section>
+
+  <section>
+    <h2>9. Remaining issues and completion date</h2>
+    <p>No functional defects remain from the acceptance criteria. Outstanding publication actions are owned by the project publisher: create the private GitHub repository with reviewer access, deploy the HTTPS preview, insert both URLs into this document and <code>COMPLETION_NOTE.txt</code>, and share the Drive folder. The example contact address should be replaced only when an approved public address is supplied.</p>
+    <p class="note">Prepared and tested 19 November 2026.</p>
+  </section>
+</body>
+</html>
