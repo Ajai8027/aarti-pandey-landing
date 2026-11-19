@@ -2,6 +2,8 @@
 
 A fast, single-page React landing page for Aarti Pandey Business Studio, built from the supplied desktop (1440px), tablet (768px) and mobile (375px) references. It includes an accessible briefing registration form that validates and confirms entirely in the browser—no backend, analytics, or external submission.
 
+**Live demo:** [https://aarti-pandey-landing.vercel.app](https://aarti-pandey-landing.vercel.app)
+
 ## Requirements
 
 - Node.js 20.19+ or 22.12+ (Vite 8 requirement; verified on Node 24)

@@ -32,7 +32,7 @@
     <h2>1. Project and links</h2>
     <div class="meta">
       <p><strong>Source (private GitHub repository):</strong> [insert repository URL before submission]</p>
-      <p><strong>Live HTTPS preview (Vercel/Netlify):</strong> [insert deployment URL before submission]</p>
+      <p><strong>Live HTTPS deployment (Vercel):</strong> <a href="https://aarti-pandey-landing.vercel.app">https://aarti-pandey-landing.vercel.app</a> — production deployment verified at 375, 768 and 1024px.</p>
       <p><strong>Local project:</strong> <code>aarti-pandey-landing/</code> &nbsp;|&nbsp; <strong>Production output:</strong> <code>dist/</code></p>
     </div>
     <p>Scope: a single-page, mobile-responsive marketing page with a local-only briefing registration form. The original supplied artwork and copy were used; no unlicensed imagery, analytics, tracking or external form endpoints were added.</p>
@@ -120,6 +120,7 @@
     <h2>8. Production build status and performance observations</h2>
     <p><code>npm run build</code> completed with no errors in 673ms (31 modules transformed). Output: <code>index.html</code> 0.75 kB (0.43 kB gzip), CSS 14.35 kB (3.32 kB gzip), JavaScript 153.11 kB (49.91 kB gzip). All original SVG/PNG assets were copied into <code>dist/assets/</code> and no asset was missing (QA12).</p>
     <p>Images declare intrinsic <code>width</code>/<code>height</code> to avoid layout shift; the hero SVG is loaded eagerly as it is above the fold, and the three service icons use <code>loading="lazy"</code>. No third-party scripts, fonts or tracking requests are present, so the page has only local assets.</p>
+    <p><strong>Live deployment check:</strong> the Vercel production URL returned HTTP 200 and, in headless Edge at 375/768/1024px, rendered the correct heading and five sections, loaded all images, produced no horizontal overflow or console errors, and passed empty, invalid and valid form submissions plus anchor navigation.</p>
   </section>
 
   <section>

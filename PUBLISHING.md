@@ -23,7 +23,11 @@ git push -u origin main
 
 In repository **Settings → Collaborators**, add the authorized reviewer with **Read** access. Confirm the README, `dist/` exclusions (see `.gitignore`), source and QA evidence are present on the main branch.
 
-## 2. Live HTTPS preview
+## 2. Live HTTPS preview — DONE
+
+Deployed to Vercel with the available token. Project: `ajaikarthicks-projects/aarti-pandey-landing`.
+Production URL: **https://aarti-pandey-landing.vercel.app**
+Verified at 375/768/1024px with no console errors and a working registration form.
 
 **Vercel (repository import — recommended):**
 1. Import the private repository in Vercel.

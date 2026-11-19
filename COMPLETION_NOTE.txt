@@ -14,7 +14,7 @@ FINAL DELIVERABLES (in this project folder)
 
 URLS TO INSERT BEFORE SUBMISSION
 GitHub repository (private, reviewer invited): [INSERT URL]
-Live HTTPS deployment (Vercel / Netlify):      [INSERT URL]
+Live HTTPS deployment (Vercel):                https://aarti-pandey-landing.vercel.app
 
 GOOGLE DRIVE SUBMISSION FOLDER
 Create one folder, place TECHNICAL_SUMMARY.pdf, COMPLETED_QA_MATRIX.csv,
@@ -30,6 +30,9 @@ VALIDATION SUMMARY
   dist/index.html in VS Code Live Preview. The source index.html needs Vite.
 - npm run qa:static: PASS (built page renders in VS Code Live Preview at 3000,
   all images load, no console errors).
+- Live Vercel URL verified at 375/768/1024px: heading and 5 sections render,
+  all images load, no overflow, empty/invalid/valid form paths pass, anchors
+  work, 0 console errors.
 
 KNOWN LIMITATIONS
 - Footer Contact uses the supplied example address hello@example.org.
