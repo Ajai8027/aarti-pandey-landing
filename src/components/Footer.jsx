@@ -3,7 +3,7 @@ import styles from '../styles/Footer.module.css';
 /** Site footer with in-page links, an example contact address, and legal copy. */
 export default function Footer() {
   return (
-    <footer className={styles.footer} data-testid="site-footer">
+    <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brandBlock}>
           <p className={styles.brand}>

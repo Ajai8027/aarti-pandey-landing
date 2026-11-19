@@ -1,0 +1,31 @@
+{
+  "url": "http://127.0.0.1:3000/aarti-pandey-landing/dist/index.html?vscode-livepreview=true",
+  "status": "PASS",
+  "title": "Aarti Pandey | Business Studio",
+  "heading": "Build clarity.Move forward.",
+  "sections": 5,
+  "fields": 4,
+  "images": [
+    {
+      "src": "./assets/AartiPandey_Logo.svg",
+      "loaded": true
+    },
+    {
+      "src": "./assets/AartiPandey_Hero_Illustration.svg",
+      "loaded": true
+    },
+    {
+      "src": "./assets/Icon_Strategy.svg",
+      "loaded": true
+    },
+    {
+      "src": "./assets/Icon_Operations.svg",
+      "loaded": true
+    },
+    {
+      "src": "./assets/Icon_Enablement.svg",
+      "loaded": true
+    }
+  ],
+  "errors": []
+}

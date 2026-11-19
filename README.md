@@ -15,15 +15,30 @@ npm run dev       # start the Vite dev server (http://localhost:5173)
 npm run build     # produce the optimized production build in dist/
 npm run preview   # serve the production build locally (http://localhost:4173)
 npm run qa        # build, launch Microsoft Edge headless, run 14 viewport/QA checks
+npm run qa:static # verify dist/index.html in VS Code Live Preview (port 3000 must be running)
 ```
 
 `npm run qa` uses `playwright-core` with the locally installed Microsoft Edge; it does not download a browser. It writes screenshots and measurements to `qa/evidence/` and overwrites `COMPLETED_QA_MATRIX.csv` with the recorded results.
+
+## Viewing the page (important)
+
+The source `index.html` contains JSX and bare React imports, so it **cannot be opened directly** by a static file server such as VS Code Live Preview. Use one of these instead:
+
+| Method | Command / URL | Notes |
+| --- | --- | --- |
+| Vite dev server | `npm run dev` → `http://localhost:5173/` | Recommended while editing; supports HMR. |
+| Vite production preview | `npm run build && npm run preview` → `http://localhost:4173/` | Serves the exact production output. |
+| VS Code Live Preview | Open `/aarti-pandey-landing/dist/index.html` at port 3000 | Works after a build: `vite.config.js` sets `base: './'` and all image/favicon URLs are relative. Open the **built** file, not the source `index.html`. |
+
+A blank page at `.../aarti-pandey-landing/index.html?vscode-livepreview=true` means a static server tried to run unbundled JSX; switch to one of the URLs above.
 
 ## Project structure
 
 ```
 aarti-pandey-landing/
-├── index.html                     # document metadata, viewport, favicon
+├── index.html                     # Vite entry document: metadata, viewport, favicon
+├── vite.config.js                 # relative base for portable static previews
+├── .editorconfig                  # shared formatting rules
 ├── public/
 │   ├── assets/                    # original supplied logo, hero and icon artwork
 │   └── favicon.svg
@@ -44,6 +59,7 @@ aarti-pandey-landing/
 │       └── *.module.css           # one scoped stylesheet per component
 ├── qa/
 │   ├── responsive-check.mjs       # automated browser QA driver
+│   ├── static-preview-check.mjs   # verifies the built page in a static server
 │   └── evidence/                  # screenshots + results.json
 ├── COMPLETED_QA_MATRIX.csv         # 14 test cases with actual results
 ├── TECHNICAL_SUMMARY.pdf           # component/design/test summary

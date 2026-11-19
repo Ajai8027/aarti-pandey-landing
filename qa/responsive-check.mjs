@@ -121,19 +121,19 @@ try {
           return rect.width > 0 && (rect.right > vw + 1 || rect.left < -1);
         })
         .slice(0, 8)
-        .map((element) => `${element.tagName.toLowerCase()}[${element.getAttribute('data-testid') || element.id || ''}] right=${Math.round(element.getBoundingClientRect().right)}`);
+        .map((element) => `${element.tagName.toLowerCase()}[${element.id || element.getAttribute('aria-label') || ''}] right=${Math.round(element.getBoundingClientRect().right)}`);
       return {
         vw,
         docScrollWidth: document.documentElement.scrollWidth,
         bodyScrollWidth: document.body.scrollWidth,
         offenders,
-        heroContent: box('[data-testid="hero-content"]'),
-        heroVisual: box('[data-testid="hero-visual"]'),
-        cards: [...document.querySelectorAll('[data-testid="service-card"]')].map((element) => {
+        heroContent: box('#hero > div > div:first-of-type'),
+        heroVisual: box('#hero > div > div:last-of-type'),
+        cards: [...document.querySelectorAll('#services li')].map((element) => {
           const rect = element.getBoundingClientRect();
           return { x: Math.round(rect.x), y: Math.round(rect.y), w: Math.round(rect.width) };
         }),
-        fields: [...document.querySelectorAll('[data-testid="registration-form"] input, [data-testid="registration-form"] select')].map((element) => {
+        fields: [...document.querySelectorAll('#register form input, #register form select')].map((element) => {
           const rect = element.getBoundingClientRect();
           return { name: element.name, x: Math.round(rect.x), y: Math.round(rect.y) };
         }),
@@ -144,10 +144,10 @@ try {
           height: image.getAttribute('height'),
           naturalWidth: image.naturalWidth,
         })),
-        menuVisible: getComputedStyle(document.querySelector('[data-testid="menu-button"]')).display !== 'none',
-        navVisible: getComputedStyle(document.querySelector('[data-testid="primary-nav"]')).display !== 'none',
+        menuVisible: getComputedStyle(document.querySelector('button[aria-controls="primary-navigation"]')).display !== 'none',
+        navVisible: getComputedStyle(document.querySelector('#primary-navigation')).display !== 'none',
         landmarks: {
-          header: document.querySelectorAll('header[data-testid="site-header"]').length,
+          header: document.querySelectorAll('#root > div > header').length,
           main: document.querySelectorAll('main').length,
           sections: document.querySelectorAll('main section').length,
           footer: document.querySelectorAll('footer').length,
@@ -167,10 +167,10 @@ try {
   let m = await audit(375);
   metrics[375] = m;
   await screenshot(375);
-  const menuOpened = await page.locator('[data-testid="menu-button"]').click().then(() => true).catch(() => false);
+  const menuOpened = await page.locator('button[aria-controls="primary-navigation"]').click().then(() => true).catch(() => false);
   await sleep(100);
-  const mobileNav = await page.locator('[data-testid="primary-nav"] a').count();
-  await page.locator('[data-testid="primary-nav"] a[href="#services"]').click();
+  const mobileNav = await page.locator('#primary-navigation a').count();
+  await page.locator('#primary-navigation a[href="#services"]').click();
   await sleep(250);
   const mobileHash = await page.evaluate(() => window.location.hash);
   const menuEvidence = await screenshot(375, 'menu-open');
@@ -182,7 +182,7 @@ try {
   const cardXs375 = [...new Set(m.cards.map((card) => card.x))];
   setCase('QA05', m.cards.length === 3 && cardXs375.length === 1, `${m.cards.length} service cards, all at x=${cardXs375.join(',')} (single column).`, 'qa/evidence/375px.png');
 
-  await page.locator('[data-testid="registration-form"] button[type="submit"]').click();
+  await page.locator('#register form button[type="submit"]').click();
   const emptyErrors = await page.locator('[class*="error"]').allTextContents();
   const emptyInvalid = await page.locator('#fullName').getAttribute('aria-invalid');
   const focusAfterEmpty = await page.evaluate(() => document.activeElement?.id);
@@ -223,7 +223,7 @@ try {
   await page.fill('#fullName', 'Taylor Rivera');
   await page.fill('#email', 'not-an-email');
   await page.fill('#organization', 'Example Co');
-  await page.locator('[data-testid="registration-form"] button[type="submit"]').click();
+  await page.locator('#register form button[type="submit"]').click();
   const emailError = await page.locator('#email-error').textContent().catch(() => '');
   const focusAfterEmail = await page.evaluate(() => document.activeElement?.id);
   await screenshot(768, 'email-error');
@@ -234,7 +234,7 @@ try {
   metrics[1024] = m;
   await screenshot(1024);
   setCase('QA02', m.navVisible && !m.menuVisible, `Horizontal navigation visible (${m.navVisible}); hamburger hidden (${!m.menuVisible}).`, 'qa/evidence/1024px.png');
-  await page.locator('[data-testid="primary-nav"] a[href="#approach"]').click();
+  await page.locator('#primary-navigation a[href="#approach"]').click();
   await sleep(250);
   const desktopHash = await page.evaluate(() => window.location.hash);
   if (desktopHash !== '#approach') setCase('QA02', false, `Anchor hash was ${desktopHash} instead of #approach.`, 'qa/evidence/1024px.png');
@@ -252,8 +252,8 @@ try {
   await page.fill('#email', 'taylor@example.com');
   await page.fill('#organization', 'Example Co');
   await page.selectOption('#interest', 'Operations');
-  await page.locator('[data-testid="registration-form"] button[type="submit"]').click();
-  const successText = await page.locator('[data-testid="success-status"] p').textContent().catch(() => '');
+  await page.locator('#register form button[type="submit"]').click();
+  const successText = await page.locator('#register [role="status"] p').textContent().catch(() => '');
   const sentinel = await page.evaluate(() => window.__qaSentinel);
   const successEvidence = await screenshot(1024, 'form-success');
   setCase(
@@ -271,7 +271,7 @@ try {
     const descriptor = await page.evaluate(() => {
       const element = document.activeElement;
       if (!element || element === document.body) return 'body';
-      return element.getAttribute('data-testid') || element.id || element.textContent?.trim().slice(0, 28) || element.tagName.toLowerCase();
+      return element.id || element.getAttribute('aria-label') || element.textContent?.trim().slice(0, 28) || element.tagName.toLowerCase();
     });
     focusSequence.push(descriptor);
     await page.keyboard.press('Tab');

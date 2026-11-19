@@ -26,6 +26,10 @@ VALIDATION SUMMARY
 - npm run qa: PASS 14/14 cases at 375/390/768/1024/1440px, 0 console errors
 - Registration form: accessible validation and in-session success message;
   no backend, analytics or external form submission.
+- Viewing note: use npm run dev (5173), npm run preview (4173), or open
+  dist/index.html in VS Code Live Preview. The source index.html needs Vite.
+- npm run qa:static: PASS (built page renders in VS Code Live Preview at 3000,
+  all images load, no console errors).
 
 KNOWN LIMITATIONS
 - Footer Contact uses the supplied example address hello@example.org.

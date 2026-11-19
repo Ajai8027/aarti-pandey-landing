@@ -2,7 +2,7 @@
   "browser": "157.0.4341.60",
   "executablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
   "baseUrl": "http://127.0.0.1:4173",
-  "buildOutput": "\u001b[36mvite v8.3.8 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 31 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.75 kB │ gzip:  0.43 kB\ndist/assets/index-h1cYkHZf.css   14.35 kB │ gzip:  3.32 kB\ndist/assets/index-CodESxco.js   153.11 kB │ gzip: 49.91 kB\n\n\u001b[32m✓ built in 673ms\u001b[39m\n",
+  "buildOutput": "\u001b[36mvite v8.3.8 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\ntransforming...\n✓ 31 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                   0.75 kB │ gzip:  0.43 kB\ndist/assets/index-LOxXaAZi.css   14.33 kB │ gzip:  3.31 kB\ndist/assets/index-CHhol_DC.js   153.89 kB │ gzip: 49.91 kB\n\n\u001b[32m✓ built in 548ms\u001b[39m\n",
   "metrics": {
     "375": {
       "vw": 375,
@@ -66,35 +66,35 @@
       ],
       "images": [
         {
-          "src": "/assets/AartiPandey_Logo.svg",
+          "src": "./assets/AartiPandey_Logo.svg",
           "alt": "Aarti Pandey / Business Studio",
           "width": "420",
           "height": "110",
           "naturalWidth": 420
         },
         {
-          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "src": "./assets/AartiPandey_Hero_Illustration.svg",
           "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
           "width": "820",
           "height": "650",
           "naturalWidth": 820
         },
         {
-          "src": "/assets/Icon_Strategy.svg",
+          "src": "./assets/Icon_Strategy.svg",
           "alt": "Bar chart icon representing strategy",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Operations.svg",
+          "src": "./assets/Icon_Operations.svg",
           "alt": "Connected nodes icon representing operations",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Enablement.svg",
+          "src": "./assets/Icon_Enablement.svg",
           "alt": "Check mark icon representing team enablement",
           "width": "160",
           "height": "160",
@@ -172,35 +172,35 @@
       ],
       "images": [
         {
-          "src": "/assets/AartiPandey_Logo.svg",
+          "src": "./assets/AartiPandey_Logo.svg",
           "alt": "Aarti Pandey / Business Studio",
           "width": "420",
           "height": "110",
           "naturalWidth": 420
         },
         {
-          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "src": "./assets/AartiPandey_Hero_Illustration.svg",
           "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
           "width": "820",
           "height": "650",
           "naturalWidth": 820
         },
         {
-          "src": "/assets/Icon_Strategy.svg",
+          "src": "./assets/Icon_Strategy.svg",
           "alt": "Bar chart icon representing strategy",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Operations.svg",
+          "src": "./assets/Icon_Operations.svg",
           "alt": "Connected nodes icon representing operations",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Enablement.svg",
+          "src": "./assets/Icon_Enablement.svg",
           "alt": "Check mark icon representing team enablement",
           "width": "160",
           "height": "160",
@@ -278,35 +278,35 @@
       ],
       "images": [
         {
-          "src": "/assets/AartiPandey_Logo.svg",
+          "src": "./assets/AartiPandey_Logo.svg",
           "alt": "Aarti Pandey / Business Studio",
           "width": "420",
           "height": "110",
           "naturalWidth": 420
         },
         {
-          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "src": "./assets/AartiPandey_Hero_Illustration.svg",
           "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
           "width": "820",
           "height": "650",
           "naturalWidth": 820
         },
         {
-          "src": "/assets/Icon_Strategy.svg",
+          "src": "./assets/Icon_Strategy.svg",
           "alt": "Bar chart icon representing strategy",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Operations.svg",
+          "src": "./assets/Icon_Operations.svg",
           "alt": "Connected nodes icon representing operations",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Enablement.svg",
+          "src": "./assets/Icon_Enablement.svg",
           "alt": "Check mark icon representing team enablement",
           "width": "160",
           "height": "160",
@@ -384,35 +384,35 @@
       ],
       "images": [
         {
-          "src": "/assets/AartiPandey_Logo.svg",
+          "src": "./assets/AartiPandey_Logo.svg",
           "alt": "Aarti Pandey / Business Studio",
           "width": "420",
           "height": "110",
           "naturalWidth": 420
         },
         {
-          "src": "/assets/AartiPandey_Hero_Illustration.svg",
+          "src": "./assets/AartiPandey_Hero_Illustration.svg",
           "alt": "Illustrated growth overview dashboard with Strategy, Systems and Clarity panels, rising chart bars, and a completed check mark",
           "width": "820",
           "height": "650",
           "naturalWidth": 820
         },
         {
-          "src": "/assets/Icon_Strategy.svg",
+          "src": "./assets/Icon_Strategy.svg",
           "alt": "Bar chart icon representing strategy",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Operations.svg",
+          "src": "./assets/Icon_Operations.svg",
           "alt": "Connected nodes icon representing operations",
           "width": "160",
           "height": "160",
           "naturalWidth": 160
         },
         {
-          "src": "/assets/Icon_Enablement.svg",
+          "src": "./assets/Icon_Enablement.svg",
           "alt": "Check mark icon representing team enablement",
           "width": "160",
           "height": "160",
@@ -443,8 +443,8 @@
   ],
   "focusSequence": [
     "Skip to main content",
-    "a",
-    "menu-button",
+    "Aarti Pandey Business Studio home",
+    "Open navigation menu",
     "Join the briefing",
     "Explore services →",
     "fullName",
@@ -457,8 +457,8 @@
     "Contact",
     "body",
     "Skip to main content",
-    "a",
-    "menu-button",
+    "Aarti Pandey Business Studio home",
+    "Open navigation menu",
     "Join the briefing",
     "Explore services →",
     "fullName",
@@ -471,7 +471,7 @@
     "Contact",
     "body",
     "Skip to main content",
-    "a"
+    "Aarti Pandey Business Studio home"
   ],
   "consoleErrors": [],
   "cases": {
@@ -571,7 +571,7 @@
       "viewport": "375px",
       "action": "Navigate using Tab",
       "expected": "All controls reachable",
-      "actual": "Tab order from top: Skip to main content → a → menu-button → Join the briefing → Explore services → → fullName → email → organization → interest → Request a place → Services → Briefing → Contact → body … (30 stops). All form and footer controls reachable.",
+      "actual": "Tab order from top: Skip to main content → Aarti Pandey Business Studio home → Open navigation menu → Join the briefing → Explore services → → fullName → email → organization → interest → Request a place → Services → Briefing → Contact → body … (30 stops). All form and footer controls reachable.",
       "status": "PASS",
       "evidence": "qa/evidence/results.json (focusSequence)"
     },
@@ -591,7 +591,7 @@
       "viewport": "1024px",
       "action": "Run production build",
       "expected": "No build errors or missing assets",
-      "actual": "Vite build succeeded (673ms); emitted JS/CSS, favicon and all brand assets.",
+      "actual": "Vite build succeeded (548ms); emitted JS/CSS, favicon and all brand assets.",
       "status": "PASS",
       "evidence": "qa/evidence/results.json (build.output)"
     },

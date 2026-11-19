@@ -3,7 +3,7 @@ import styles from '../styles/About.module.css';
 /** Short "about" band required by the content guide. */
 export default function About() {
   return (
-    <section id="about" data-testid="about" className={styles.about} aria-labelledby="about-title">
+    <section id="about" className={styles.about} aria-labelledby="about-title">
       <div className={styles.inner}>
         <div className={styles.heading}>
           <span className={styles.accent} aria-hidden="true" />

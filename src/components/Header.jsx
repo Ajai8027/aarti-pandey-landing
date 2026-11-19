@@ -8,18 +8,18 @@ const navigation = [
   { label: 'Register', href: '#register', cta: true },
 ];
 
-/** Site header with a disclosure menu on narrow viewports. */
+/** Site header with a disclosure-style menu on narrow viewports. */
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Close the mobile menu when the viewport grows back to the desktop layout.
   useEffect(() => {
     const desktop = window.matchMedia('(min-width: 768px)');
-    const handleChange = (event) => {
+    const closeOnDesktop = (event) => {
       if (event.matches) setMenuOpen(false);
     };
-    desktop.addEventListener('change', handleChange);
-    return () => desktop.removeEventListener('change', handleChange);
+
+    desktop.addEventListener('change', closeOnDesktop);
+    return () => desktop.removeEventListener('change', closeOnDesktop);
   }, []);
 
   const handleKeyDown = (event) => {
@@ -27,12 +27,12 @@ export default function Header() {
   };
 
   return (
-    <header className={styles.header} data-testid="site-header" onKeyDown={handleKeyDown}>
+    <header className={styles.header} onKeyDown={handleKeyDown}>
       <div className={styles.inner}>
-        <a className={styles.brand} href="#main-content" aria-label="Aarti Pandey Business Studio, skip to main content">
+        <a className={styles.brand} href="#hero" aria-label="Aarti Pandey Business Studio home">
           <img
             className={styles.logo}
-            src="/assets/AartiPandey_Logo.svg"
+            src="./assets/AartiPandey_Logo.svg"
             alt="Aarti Pandey / Business Studio"
             width="420"
             height="110"
@@ -41,7 +41,6 @@ export default function Header() {
 
         <button
           className={styles.menuButton}
-          data-testid="menu-button"
           type="button"
           aria-controls="primary-navigation"
           aria-expanded={menuOpen}
@@ -55,7 +54,6 @@ export default function Header() {
 
         <nav
           id="primary-navigation"
-          data-testid="primary-nav"
           className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}
           aria-label="Primary navigation"
         >

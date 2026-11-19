@@ -21,7 +21,7 @@ const steps = [
 /** Three-step approach section required by the content guide. */
 export default function Approach() {
   return (
-    <section id="approach" data-testid="approach" className={styles.approach} aria-labelledby="approach-title">
+    <section id="approach" className={styles.approach} aria-labelledby="approach-title">
       <div className={styles.inner}>
         <header className={styles.heading}>
           <h2 id="approach-title">How we approach progress</h2>

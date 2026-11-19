@@ -47,7 +47,8 @@
       <tr><td>playwright-core</td><td>1.65.x (dev only)</td><td>Automated browser QA with local Microsoft Edge</td></tr>
       <tr><td>CSS Modules</td><td>built into Vite</td><td>Scoped per-component styling</td></tr>
     </table>
-    <p>Commands: <code>npm install</code>, <code>npm run dev</code>, <code>npm run build</code>, <code>npm run preview</code>, <code>npm run qa</code>. <code>npm audit</code> reports 0 vulnerabilities. Node 20.19+ or 22.12+ is required by Vite 8; verification used Node 24.19.0.</p>
+    <p>Commands: <code>npm install</code>, <code>npm run dev</code> (http://localhost:5173/), <code>npm run build</code>, <code>npm run preview</code> (http://localhost:4173/), <code>npm run qa</code>. <code>npm audit</code> reports 0 vulnerabilities. Node 20.19+ or 22.12+ is required by Vite 8; verification used Node 24.19.0.</p>
+    <p><strong>Static preview note:</strong> the source <code>index.html</code> contains JSX and bare React imports and must be served by Vite. <code>vite.config.js</code> sets <code>base: './'</code> and all image/favicon URLs are relative, so after a build the static VS Code Live Preview can open <code>/aarti-pandey-landing/dist/index.html</code> at port 3000. Verified with <code>npm run qa:static</code>: heading, five sections, four fields and all five images loaded with no console errors.</p>
   </section>
 
   <section>
@@ -92,6 +93,7 @@
       <li>All inputs and the select have visible labels; the submit and menu buttons have accessible names; all five images have descriptive alt text.</li>
       <li>Skip link, visible <code>:focus-visible</code> outline, Escape-to-close menu, logical heading levels and <code>prefers-reduced-motion</code> support.</li>
       <li>Tab traversal verified from the top of the 375px page through all form controls and footer links.</li>
+      <li>Markup stays clean: automated checks use natural IDs, landmarks and ARIA selectors rather than test-only attributes.</li>
       <li>Limitation: the footer Contact link is the guide's example <code>mailto:hello@example.org</code>; replace with an approved address before production.</li>
       <li>Limitation: automated QA ran in Microsoft Edge (Chromium) 157 only; Firefox and Safari were not available in the environment.</li>
     </ul>
